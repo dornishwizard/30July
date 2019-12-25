@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap" rel="stylesheet">
+    	<link rel="stylesheet" href="/Users/shraddhamurali/Downloads/bulma-0.7.5/css/bulma.min.css">
+    	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway&display=swap" rel="stylesheet">
 
     	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
     	
@@ -40,11 +40,13 @@
 
         		.title{font-family: 'Raleway', sans-serif; font-style: extra-bold; font-weight: bold;}
 
-        		p{font-family: 'Open Sans', sans-serif;}
+        		p,label,input, .required{font-family: 'Open Sans', sans-serif;}
 
         		.ml3 {
 				  font-weight: 900;
-				  font-size: 3.5em;
+				  font-size: 2em;
+				  font-family: 'Raleway', sans-serif;
+
 				}
 
 		</style>
@@ -68,9 +70,10 @@
 	  	<nav class="navbar">
 		    <div class="container">
 		    	<div class="navbar-brand">
-		          <a class="navbar-item">
+		          <a class="navbar-item has-text-weight-bold has-text-white ml3" href="http://www.the30thJulyProject.in">
+		          	The 30th July Project
 		            
-		            <i class="fas fa-microphone-alt fa-3x"></i>
+		            <!--<i class="fas fa-microphone-alt fa-3x"></i>-->
 
 		            
 		          </a>
@@ -80,15 +83,15 @@
 		          </span>
         		</div>
 				<div id="navbarMenuHeroA" class="navbar-menu">
-					<div class="navbar-start">
+					<!--<div class="navbar-start">
 						<a class="navbar-item has-text-weight-bold is-size-5 has-text-white title ml3">
 							
 							
              				The 30th July Project
             			</a>
-            		</div>
+            		</div>-->
             		<div class="navbar-end">
-            			<a class="navbar-item has-text-weight-bold has-text-white is-size-5 title">
+            			<a class="navbar-item has-text-weight-bold has-text-white is-size-5 title" href="#contact">
             				Contact Us
             			</a>
             		</div>
@@ -104,7 +107,7 @@
 	<section class="hero has-background flex-center">
 		
 			<figure class="image is-3by2">
-				<img alt="30th July" class="hero-background" src="./main.JPG">
+				<img alt="30th July" class="hero-background" src="main.JPG">
 			</figure>
 		
 
@@ -121,7 +124,7 @@
     			About Us
     		</h1>
     		<p class="is-size-4 has-text-centered">
-    			We are a 6-member artist management non-profit in the Delhi-NCR space. We're the glue between venues and upcoming artists, and seek to improve the culture of live, independent music through curated events.
+    			We are a 6-member artist management non-profit in the Delhi-NCR space. We bridge the gap between upcoming artists and venues, and seek to improve the live music culture and independent music culture through curated events.
     		</p>
 		</div>
     </section>
@@ -206,7 +209,7 @@
     	                                                                    
     </section>
 
-     <!--TEAM-->
+     <!--TEAM: ADD TO LIVE SITE-->
     <section class="section">
     	<div class="container" data-aos="fade-up">
     		
@@ -215,10 +218,11 @@
 	    		</h1>
 	    	
     	</div>
+    	<br>
     	
     	<!--</div>
     	<div class="container" style="padding: 10px">-->
-    		<div class="columns is-vcentered is-centered is-multiline is-8" style="padding-top: 75px" data-aos="fade-up">
+    		<!--<div class="columns is-vcentered is-centered is-multiline is-8" style="padding-top: 75px" data-aos="fade-up">
     			<div class="column" style="padding-left:175px; padding-right: 175px;">
     				
     				<p class="is-size-5 has-vertically-aligned-content has-text-centered">A musician, maverick, aesthetic genius, number magician, financial analyst and engineer came together in July 2019 with one common thread: their passion for music, especially when done live. Currently based in Ashoka University, we each wear multiple hats in the conception and development of what we'd like to see in Delhi's live music scene. 
@@ -227,14 +231,85 @@
     				<img class="is-rounded" src="team.jpg" alt="Team"></img>
     			</div>
     		</div>
+    	</div>-->
+    	<div class="container">
+    		<div class="columns is-centered is-vcentered is-multiline is-variable is-8" data-aos="fade-up">
+    			<div class="column is-5 is-offset-1">
+    				<div class="content is-medium">
+    					<p class="is-size-5 has-vertically-aligned-content has-text-centered">A musician, maverick, aesthetic genius, number magician, financial analyst and engineer came together in July 2019 with one common thread: their passion for music, especially when done live. Currently based in Ashoka University, we each wear multiple hats in the conception and development of what we'd like to see in Delhi's live music scene.
+    					
+    				</div>
+    			</div>
+    			<div class="column is-5">
+    				<img class="is-rounded" src="team.jpg" alt="Team"></img>
+    			</div>
+    		</div>
     	</div>
     </section>
 
-    <!--CONTACT-->
-    <section class="section">
+    <!--CONTACT--Change focus color to primary-->
+    <section class="section" id="contact">
     	<div class="container">
-    		<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdkcGe6y02bJtUJKFD-eYAMvKfWDBGGW8QDq4A1Sm0ZK71psw/viewform?embedded=true" width=100% height=100% frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    	</div>
+    		<h1 class="title center has-text-primary">
+	    			Get in Touch
+	    		</h1>
+	    	<br>
+	    	<div class="columns">
+	    		<div class="column is-6 is-offset-3">
+	    			<div class="box" data-aos="fade-zoom-in">
+	    				<form name="submit-to-google-sheet" action=" " onsubmit="return Contact()" method="post">
+		    				<div class="field">
+		    					<label class="label">Name</label>
+		    					<div class="control">
+		    						<input class="input" id="namefield" type="text" name="Name" placeholder=" " required>
+		    					</div>
+		    					<p class="help" id="demo"><i></i></p>
+		    				</div>
+		    				
+		    				<div class="field"><!--email: validate-->
+		    					<label class="label">Email</label>
+		    					<div class="control has-icons-left">
+		    						<input type="email" name="email" id="email" class="input" placeholder="example@mail.com" value=" " required>
+		    						<span class="icon is-small is-left">
+	     							 <i class="fas fa-envelope"></i>
+	    							</span>
+		    					</div>
+		    					<p class="help"><i>This email is invalid</i></p>
+		    				</div>
+
+		    				<div class="field">
+	  							<label class="label">Who are you representing?</label>
+	 							<div class="control">
+	   							<div class="select" Name="Who"><!--make a default option-->
+	      							<select id="who">
+	        							<option value="Artist">Artist</option>
+	        							<option value="Venue">Venue</option>
+	        							<option value="Other">Other/General</option>
+	    							</select>
+
+	   							</div>
+	  							</div>
+							</div>
+
+							<div class="field">
+	  							<label class="label">Enter your query/comments here.</label>
+	 							<div class="control">
+	   								 <textarea id="q" class="textarea" placeholder="Type here" name="txt" required></textarea>
+
+	  							</div>
+							</div>
+
+							<div class="field">
+								<div class="control">
+									<button class="button is-primary" type="submit">Submit</button>
+								</div>
+							</div>
+						</form>
+	    			</div>
+	    	</div>
+		</div>
+    	
+
     </section>
 
 	<footer class="footer">
@@ -255,12 +330,36 @@
 	</footer>
 	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-    <script>
+    <script type="text/javascript">
       AOS.init({
         easing: "ease-out",
         duration: 800,
       });
-    </script>
+
+      /*function Contact() {
+      	//validation 
+      	var txt="";
+      	if (document.getElementById("namefield").validity.valueMissing)
+      		txt="This field is required";
+      	document.getElementById("demo").innerHTML=txt;
+      	
+      }*/
+
+
+  		const scriptURL = 'https://script.google.com/macros/s/AKfycbxvd9DQCv3thgXBr9bjtJq7IMGx2M5XXg800AgQvs6MiRCfWiXI/exec'
+  		const form = document.forms['submit-to-google-sheet']
+
+ 		 form.addEventListener('submit', e => {
+    				e.preventDefault()
+   		 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    	  .then(response => console.log('Success!', response))
+			.catch(error => console.error('Error!', error.message))
+  		})
+
+      </script>
+
+
+    
     <script type="text/javascript">
     	const anime = require('animejs');
     	// Wrap every letter in a span
