@@ -9,7 +9,7 @@
     	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">-->
     	
 		<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-		<script src="anime.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<title>The 30th July Project</title>
 		<style type="text/css">
 				/*.hero.has-background {
@@ -99,13 +99,24 @@
 
 				::selection 
 				{
-					color: hsl(171, 100%, 41%);
+					color: white;
+					background: hsl(171, 100%, 41%);
 				}
 
 				.hero-body
 				{
 					text-shadow: 1px 1px grey;
 				}
+				.is-static
+				{
+				  color: hsl(171, 100%, 41%)!important;
+
+				}
+
+				:focus {
+				  border-color: hsl(171, 100%, 41%)!important;
+				}
+
 
 		</style>
 	</head>
@@ -356,46 +367,48 @@
 	    		<div class="column is-6 is-offset-3">
 	    			<div class="box" data-aos="fade-zoom-in">
 	    				<form name="submit-to-google-sheet" action=" " onsubmit="return Contact()" method="post">
-		    				<div class="field">
-		    					<label class="label">Name</label>
-		    					<div class="control">
-		    						<input class="input" id="namefield" type="text" name="Name" placeholder=" " required>
-		    					</div>
-		    					<p class="help" id="demo"><i></i></p>
-		    				</div>
-		    				
-		    				<div class="field"><!--email: validate-->
-		    					<label class="label">Email</label>
-		    					<div class="control has-icons-left">
-		    						<input type="email" name="email" id="email" class="input" placeholder="example@mail.com" value=" " required>
-		    						<span class="icon is-small is-left">
-	     							 <i class="fas fa-envelope"></i>
-	    							</span>
-		    					</div>
-		    					<!--<p class="help"><i>This email is invalid</i></p>-->
-		    				</div>
+						<fieldset>
+							<div class="field">
+								<label class="label">Name</label>
+								<div class="control">
+									<input class="input" id="namefield" type="text" name="Name" placeholder=" " required>
+								</div>
+								<p class="help" id="demo"><i></i></p>
+							</div>
 
-		    				<div class="field">
-	  							<label class="label">Who are you representing?</label>
-	 							<div class="control">
-	   							<div class="select"><!--make a default option-->
-	      							<select id="who" Name="Who">
-	        							<option value="Artist">Artist</option>
-	        							<option value="Venue">Venue</option>
-	        							<option value="Other" selected>Other/General</option>
-	    							</select>
-
-	   							</div>
-	  							</div>
+							<div class="field"><!--email: validate-->
+								<label class="label">Email</label>
+								<div class="control has-icons-left">
+									<input type="email" name="email" id="email" class="input" placeholder="example@mail.com" value=" " required>
+									<span class="icon is-small is-left">
+									 <i class="fas fa-envelope"></i>
+									</span>
+								</div>
+								<!--<p class="help"><i>This email is invalid</i></p>-->
 							</div>
 
 							<div class="field">
-	  							<label class="label">Enter your query/comments here.</label>
-	 							<div class="control">
-	   								 <textarea id="q" class="textarea" placeholder="Type here" name="txt" required></textarea>
+									<label class="label">Who are you representing?</label>
+									<div class="control">
+									<div class="select"><!--make a default option-->
+									<select id="who" Name="Who">
+										<option value="Artist">Artist</option>
+										<option value="Venue">Venue</option>
+										<option value="Other" selected>Other/General</option>
+									</select>
 
-	  							</div>
-							</div>
+									</div>
+									</div>
+								</div>
+
+								<div class="field">
+									<label class="label">Enter your query/comments here.</label>
+									<div class="control">
+										 <textarea id="q" class="textarea" placeholder="Type here" name="txt" required></textarea>
+
+									</div>
+								</div>
+						</fieldset>
 
 							<div class="field">
 								<div class="control">
@@ -461,24 +474,32 @@
 
     
     <script type="text/javascript">
-    	const anime = require('animejs');
-    	// Wrap every letter in a span
-		var textWrapper = document.querySelector('.ml3');
-		textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+	    function resetForm(){
 
-		anime.timeline({loop: true})
-		  .add({
-		    targets: '.ml3 .letter',
-		    opacity: [0,1],
-		    easing: "easeInOutQuad",
-		    duration: 2250,
-		    delay: (el, i) => 150 * (i+1)
-		  }).add({
-		    targets: '.ml3',
-		    opacity: 0,
-		    duration: 1000,
-		    easing: "easeOutExpo",
-		    delay: 1000
-		  });
+			$("form")[0].reset();
+			$("fieldset").removeAttr("disabled");
+			$("#submit").removeClass("is-static")
+			$("#submit").text("Submit")
+
+		}
+
+
+	      $(function()
+	      {
+		$("form").submit(function()
+		    {
+		      $("#submit").text("Success")
+			.addClass("is-static");
+		      $("fieldset").attr("disabled","disabled");  
+
+		      setTimeout(resetForm, 1000);
+
+
+		    }
+
+
+		  )
+	      });
     </script>
 </body>
+</html>
