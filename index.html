@@ -133,46 +133,49 @@
 		  
 		</div>
 	</section>-->
+<!--NAVBAR WITH BURGER ADDED 24/4-->
+<section class="hero is-primary is-bold is-medium">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+              <a class="navbar-item has-text-weight-bold has-text-white ml3" href="http://www.the30thJulyProject.in">
+                The 30th July Project
+                
+                <!--<i class="fas fa-microphone-alt fa-3x"></i>-->
 
-	<section class="hero is-primary is-bold is-medium">
-	  <div class="hero-head">
-	  	<nav class="navbar">
-		    <div class="container">
-		    	<div class="navbar-brand">
-		          <a class="navbar-item has-text-weight-bold has-text-white ml3" href="http://www.the30thJulyProject.in">
-		          	The 30th July Project
-		            
-		            <!--<i class="fas fa-microphone-alt fa-3x"></i>-->
-
-		            
-		          </a>
-		          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
-		            <span></span>
-		            
-		          </span>
-        		</div>
-				<div id="navbarMenuHeroA" class="navbar-menu">
-					<!--<div class="navbar-start">
-						<a class="navbar-item has-text-weight-bold is-size-5 has-text-white title ml3">
-							
-							
-             				The 30th July Project
-            			</a>
-            		</div>-->
-            		<div class="navbar-end">
-            			<a class="navbar-item has-text-weight-bold has-text-white is-size-5 title" href="#contact">
-            				Contact Us
-            			</a>
-            		</div>
-		   		</div>
-		   	</div>
-	  </div>
+                
+              </a>
+              <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+           </div>
+        <!--<div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item has-text-weight-bold is-size-5 has-text-white title">Blog
+                  </a>
+                </div>-->
+            <div id="navbarMenuHeroA" class="navbar-menu"> 
+              <div class="navbar-end">
+                 
+                	<!--navbar-item has-text-weight-bold has-text-white is-size-5 title-->
+                <a class="navbar-item has-text-weight-bold has-text-white is-size-5" href="#contact">Contact Us</a>
+                <a class="navbar-item has-text-weight-bold has-text-white is-size-5 title" href="#">Blog</a>
+              </div>
+            </div> 
+        </div>
+       </nav> 
+    </div>
 	  <!--<div class="hero-foot is-large">
 	  	<div class="container"> 
 
 	  	</div>	  		
 	  </div>-->
 	</section>
+	
+	<!--BACKGROUND IMAGE-->
 	<section class="hero has-background flex-center">
 		
 			<figure class="image is-648x432">
@@ -321,7 +324,7 @@
   		<div class="hero-body">
    			 <div class="container" data-aos="fade-up">
 			      <h1 class="center has-text-centered" style="font-size: 36pt; font-weight:bolder;">
-			        AUDITION FOR US
+			        Audition For Us
 			      </h1>
 		      		<h2 class="subtitle center has-text-centered has-text-weight-bold">
 		      			If you're interested in opportunities to perform at some of the best venues in the Delhi-NCR region, send us a video! Here are the rules: 
@@ -457,8 +460,21 @@
       	document.getElementById("demo").innerHTML=txt;
       	
       }*/
+	
+	//NAVBAR TOGGLE added 24/4
+	(function()
+      {
+      	var burger=document.querySelector('.burger');
+      	var nav=document.querySelector('#'+burger.dataset.target);
 
+      	burger.addEventListener('click', function()
+      	{
+      		burger.classList.toggle('is-active');
+      		nav.classList.toggle('is-active');
+      	});
+      })();
 
+		//form forward to google 
   		const scriptURL = 'https://script.google.com/macros/s/AKfycbxvd9DQCv3thgXBr9bjtJq7IMGx2M5XXg800AgQvs6MiRCfWiXI/exec'
   		const form = document.forms['submit-to-google-sheet']
 
@@ -474,6 +490,7 @@
 
     
     <script type="text/javascript">
+	    //form frontend
 	    function resetForm(){
 
 			$("form")[0].reset();
